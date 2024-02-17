@@ -1,0 +1,11 @@
+clc; close all; clear all; 
+n = 0:40;a = 2;b = -3;
+x1 = cos(2*pi*0.1*n);x2 = cos(2*pi*0.4*n);x = a*x1 + b*x2;
+y1 = (n .* x1) + [0 x1(1:40)];y2 = (n .* x2) + [0 x2(1:40)]; 
+y = (n .* x) + [0 x(1:40)];yt = a*y1 + b*y2; d = y - yt;
+subplot(3,1,1);stem(n,y);
+ylabel('Amplitude');title('Output x_{2}[n]');
+subplot(3,1,2);stem(n,yt);ylabel('Amplitude');title('Weighted Output:');
+subplot(3,1,3);stem(n,d);
+xlabel('Time index n');ylabel('Amplitude');
+title('Difference Signal');

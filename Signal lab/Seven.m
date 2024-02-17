@@ -1,0 +1,11 @@
+n1=3;n2=3;n=-5:4;
+x=[-1 0 1 2 3 4 4 4 4 4];
+subplot(3,1,1);stem(n,x);
+title('Signal x(n)');
+m=n+n1;y=x;
+subplot(3,1,2);stem(m,y);
+title('signal x(n-3)');
+t=n-n2;z=x;
+subplot(3,1,3);
+stem(t,z);
+title('signal x(n+3)');

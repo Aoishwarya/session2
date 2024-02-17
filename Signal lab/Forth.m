@@ -1,0 +1,15 @@
+h = [0.1, 0.2, 0.3, 0.2, 0.1];
+x = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+y = conv(x, h);
+subplot(3,1,1);
+stem(0:length(y)-1, y, 'r', 'LineWidth', 2); grid on;
+title('Causal Output Signal');xlabel('Sample Index');ylabel('Amplitude');
+subplot(3,1,2); 
+stem(0:length(x)-1, x, 'b', 'LineWidth', 2); grid on;
+title('Input Signal');
+xlabel('Sample Index');ylabel('Amplitude');
+subplot(3,1,3); 
+stem(0:length(h)-1, h, 'g', 'LineWidth', 2); grid on;
+title('Impulse Response');
+xlabel('Sample Index');ylabel('Amplitude');
+title('Causal System Response');

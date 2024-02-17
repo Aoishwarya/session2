@@ -1,0 +1,11 @@
+x=[2 -1 3 7 1 2 -3];
+nx=[-4 -3 -2 -1 0 1 2 ];
+a=xcorr(x);
+na = 0:length(a)-1;
+subplot(2,1,1);stem(x,'b');
+xlabel('time');
+ylabel('amplitude');title('input sequence');
+subplot(2,1,2);stem(a,'r');
+xlabel('time');
+ylabel('amplitude');
+title('auto correlation sequence');
